@@ -1,5 +1,5 @@
 xdomain.slaves({
-  "http://s.init.im:8081": "/proxy.html"
+  "https://ss.initiumlab.com": "/proxy.html"
 });
 
 window.React = require('react');
@@ -13,7 +13,7 @@ affairPoll.setNewUUID = function() {
   if (localStorage.getItem('uuid')) {
     this.uuid = localStorage.getItem('uuid');
   } else {
-    var url = 'http://s.init.im:8081/utility/uuid/';
+    var url = 'https://ss.initiumlab.com/utility/uuid/';
     var uuid = 'DEFAULT'+Math.random().toString(); // In case UUID server fails
     this.uuid = uuid;
     localStorage.setItem('uuid', uuid);
@@ -37,7 +37,7 @@ affairPoll.setNewUUID = function() {
 
 function post(keyToPost, valueToPost) {
   "use strict";
-  var url = "http://s.init.im:8081/remember/affairPoll/";
+  var url = "https://ss.initiumlab.com/remember/affairPoll/";
   var request = new XMLHttpRequest();
   var message = {
     username: affairPoll.uuid,
